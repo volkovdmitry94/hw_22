@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="core.js" defer></script>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Homework 22</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="nav">
+            <ul>
+                <li id="productsLink" class="active">Products</li>
+                <li id="addLink">Add product</li>
+                <input type="text" name='search' placeholder="search">
+            </ul>
+        </div>
+        <div id="section">
+            <div class="side-nav" id="content_nav">
+                <ul>
+                    <li data-name="All" class="active">All products</li>
+                    <li data-name="Milk">Milk</li>
+                    <li data-name="Chocolate">Chocolate</li>
+                    <li data-name="Wine">Wine</li>
+                </ul>
+            </div>
+            <div class="content" id="content">
+            </div>
+            <form action="#" id="form_products" style="display: none">
+                <input class="form-control" type="text" name="title"
+                       placeholder="Type product title" maxlength="100" required>
+                <input class="form-control" type="text" name="manufc"
+                       placeholder="Type manufacture" maxlength="100" required>
+                <input class="form-control" type="number" name="price" step="0.01"
+                       placeholder="Type price" min="0" required>
+                <select class="form-control" name="type" id="type">
+                  <option value="milk">Milk</option>
+                  <option value="chocolate">Chocolate</option>
+                  <option value="wine">Wine</option>
+                </select>
+                <div id="last_input">
+                  <input class="form-control" type="number" name="fat"
+                         placeholder="Type fat" min="0" max="20" required>
+                </div>
+                <button class="addBtn">add</button>
+              </form>
+        </div>
+    </div>
+</body>
+</html>
