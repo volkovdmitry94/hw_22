@@ -21,6 +21,10 @@
         formProducts.style.display = 'none';
         contentNav.style.display = 'block';
         contentSection.style.display = 'flex';
+        document.querySelectorAll('#content_nav li').forEach(node => {
+            node.classList.remove('active');
+        });
+        document.querySelector('#content_nav li:first-child').classList.add('active');
         render(store1.getAll());
     });
     addBtn.addEventListener('click', () => {
